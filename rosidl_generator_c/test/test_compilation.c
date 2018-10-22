@@ -18,7 +18,7 @@
 #include "rosidl_generator_c/msg/various__struct.h"
 #include "rosidl_generator_c/msg/various__functions.h"
 
-#include "./separate_compilation.h"
+#include "separate_compilation.h"
 
 int main(int argc, char ** argv)
 {

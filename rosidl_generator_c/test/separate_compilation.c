@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#include "./separate_compilation.h"  // NOLINT
+#include "separate_compilation.h"  // NOLINT
 
 #include <stdbool.h>
 #include <stdio.h>
