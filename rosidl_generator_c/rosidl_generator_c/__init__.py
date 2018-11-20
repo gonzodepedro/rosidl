@@ -29,6 +29,7 @@ def generate_c(generator_arguments_file):
     template_dir = args['template_dir']
     mapping_msgs = {
         os.path.join(template_dir, 'msg.h.em'): '%s.h',
+        os.path.join(template_dir, 'msg__bounds.h.em'): '%s__bounds.h',
         os.path.join(template_dir, 'msg__functions.c.em'): '%s__functions.c',
         os.path.join(template_dir, 'msg__functions.h.em'): '%s__functions.h',
         os.path.join(template_dir, 'msg__struct.h.em'): '%s__struct.h',

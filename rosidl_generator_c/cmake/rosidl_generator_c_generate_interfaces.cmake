@@ -44,6 +44,7 @@ foreach(_idl_file ${rosidl_generate_interfaces_c_IDL_FILES})
   if(_extension STREQUAL ".msg")
     list(APPEND ${_generated_headers}
       "${_output_path}/${_parent_folder}/${_header_name}.h"
+      "${_output_path}/${_parent_folder}/${_header_name}__bounds.h"
       "${_output_path}/${_parent_folder}/${_header_name}__functions.h"
       "${_output_path}/${_parent_folder}/${_header_name}__struct.h"
       "${_output_path}/${_parent_folder}/${_header_name}__type_support.h"
@@ -78,6 +79,7 @@ set(target_dependencies
   "${rosidl_generator_c_BIN}"
   ${rosidl_generator_c_GENERATOR_FILES}
   "${rosidl_generator_c_TEMPLATE_DIR}/msg.h.em"
+  "${rosidl_generator_c_TEMPLATE_DIR}/msg__bounds.h.em"
   "${rosidl_generator_c_TEMPLATE_DIR}/msg__functions.c.em"
   "${rosidl_generator_c_TEMPLATE_DIR}/msg__functions.h.em"
   "${rosidl_generator_c_TEMPLATE_DIR}/msg__struct.h.em"
