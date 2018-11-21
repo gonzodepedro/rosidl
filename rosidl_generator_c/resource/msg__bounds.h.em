@@ -55,7 +55,7 @@ for field in spec.fields:
             [])
         field_names.append(field.name)
 }@
-
+@
 @[if includes]@
 // include message dependencies
 @[  for header_file, field_names in includes.items()]@
@@ -65,7 +65,7 @@ for field in spec.fields:
 #include "@(header_file)"
 @[  end for]@
 @[end if]@
-
+@
 @{
 unbounded_fields = []
 for field in spec.fields:
@@ -80,8 +80,7 @@ for field in spec.fields:
             field.is_compound_array = True
         unbounded_fields.append(field)
 }@
-
-
+@
 @#######################################################################
 @# Struct of message bounds
 @#######################################################################
@@ -106,6 +105,3 @@ typedef struct @(msg_typename)__bounds
 #endif
 
 #endif  // @(header_guard_variable)
-
-
-
